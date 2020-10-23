@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.employee.demo.model.ResponseViewModel;
 import com.employee.demo.service.EmployeeService;
@@ -19,7 +20,7 @@ import com.employee.demo.service.EmployeeService;
  *
  */
 @RestController
-//@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*")
 public class EmployeeController {
 
 	@Autowired

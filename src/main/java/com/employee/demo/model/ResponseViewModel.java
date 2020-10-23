@@ -8,7 +8,7 @@ package com.employee.demo.model;
  */
 public class ResponseViewModel {
 
-	private int id;
+	private int key;
 	
 	private String name;
 	
@@ -20,20 +20,20 @@ public class ResponseViewModel {
 	
 	private String birthDate;
 	
-	private int status;
+	private String status;
 
 	/**
-	 * @return the id
+	 * @return the key
 	 */
-	public int getId() {
-		return id;
+	public int getKey() {
+		return key;
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param key the key to set
 	 */
-	public void setId(int id) {
-		this.id = id;
+	public void setKey(int key) {
+		this.key = key;
 	}
 
 	/**
@@ -109,14 +109,14 @@ public class ResponseViewModel {
 	/**
 	 * @return the status
 	 */
-	public int getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
 	/**
 	 * @param status the status to set
 	 */
-	public void setStatus(int status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 	

@@ -76,13 +76,13 @@ public class EmployeeServiceImpl implements EmployeeService{
 	public ResponseViewModel formViewModel(EmployeeEntity employeeEntity) {
 		if(Objects.nonNull(employeeEntity)) {
 			ResponseViewModel responseViewModel = new ResponseViewModel();
-			responseViewModel.setId(employeeEntity.getEmployeeId());
+			responseViewModel.setKey(employeeEntity.getEmployeeId());
 			responseViewModel.setName(employeeEntity.getEmployeeName());
 			responseViewModel.setPhone(employeeEntity.getPhone());
 			responseViewModel.setMail(employeeEntity.getMail());
 			responseViewModel.setPlace(employeeEntity.getPlace());
 			responseViewModel.setBirthDate(employeeEntity.getBirthDate());
-			responseViewModel.setStatus(employeeEntity.getDeptName());
+			responseViewModel.setStatus(String.valueOf(employeeEntity.getDeptName()));
 			return responseViewModel;
 		}
 		return null;
@@ -99,13 +99,13 @@ public class EmployeeServiceImpl implements EmployeeService{
 	public EmployeeEntity formEmployeeEntity(ResponseViewModel viewModel) {
 		if(Objects.nonNull(viewModel)) {
 			EmployeeEntity employeeEntity = new EmployeeEntity();
-			employeeEntity.setEmployeeId(viewModel.getId());
+			employeeEntity.setEmployeeId(viewModel.getKey());
 			employeeEntity.setEmployeeName(viewModel.getName());
 			employeeEntity.setPhone(viewModel.getPhone());
 			employeeEntity.setMail(viewModel.getMail());
 			employeeEntity.setPlace(viewModel.getPlace());
 			employeeEntity.setBirthDate(viewModel.getBirthDate());
-			employeeEntity.setDeptName(viewModel.getStatus());
+			employeeEntity.setDeptName(Integer.parseInt(viewModel.getStatus()));
 			return employeeEntity;
 		}
 		return null;
