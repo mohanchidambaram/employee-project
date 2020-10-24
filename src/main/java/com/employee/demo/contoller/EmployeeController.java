@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
@@ -32,17 +33,17 @@ public class EmployeeController {
 	}
 	
 	@PostMapping("/addEmployee")
-	public ResponseViewModel addEmployee(ResponseViewModel viewModel) {
+	public ResponseViewModel addEmployee(@RequestBody ResponseViewModel viewModel) {
 		return employeeService.addEmployee(viewModel);
 	}
 	
 	@PutMapping("/editEmployee")
-	public ResponseViewModel editEmployee(ResponseViewModel viewModel) {
+	public ResponseViewModel editEmployee(@RequestBody ResponseViewModel viewModel) {
 		return employeeService.addEmployee(viewModel);
 	}
 	
 	@DeleteMapping("/deleteEmployee")
-	public void deleteEmployee(ResponseViewModel viewModel) {
+	public void deleteEmployee(@RequestBody ResponseViewModel viewModel) {
 		employeeService.deleteEmployee(viewModel);
 	}
 }

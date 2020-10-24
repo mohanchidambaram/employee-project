@@ -82,7 +82,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 			responseViewModel.setMail(employeeEntity.getMail());
 			responseViewModel.setPlace(employeeEntity.getPlace());
 			responseViewModel.setBirthDate(employeeEntity.getBirthDate());
-			responseViewModel.setStatus(String.valueOf(employeeEntity.getDeptName()));
+			responseViewModel.setStatus(employeeEntity.getDeptName());
 			return responseViewModel;
 		}
 		return null;
@@ -105,7 +105,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 			employeeEntity.setMail(viewModel.getMail());
 			employeeEntity.setPlace(viewModel.getPlace());
 			employeeEntity.setBirthDate(viewModel.getBirthDate());
-			employeeEntity.setDeptName(Integer.parseInt(viewModel.getStatus()));
+			employeeEntity.setDeptName(viewModel.getStatus());
 			return employeeEntity;
 		}
 		return null;

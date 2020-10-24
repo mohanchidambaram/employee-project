@@ -38,7 +38,7 @@ public class EmployeeEntity {
 	public String birthDate;
 	
 	@Column(name = "dept_name")
-	public int deptName;
+	public String deptName;
 
 	/**
 	 * @return the employeeId
@@ -127,14 +127,14 @@ public class EmployeeEntity {
 	/**
 	 * @return the deptName
 	 */
-	public int getDeptName() {
+	public String getDeptName() {
 		return deptName;
 	}
 
 	/**
 	 * @param deptName the deptName to set
 	 */
-	public void setDeptName(int deptName) {
+	public void setDeptName(String deptName) {
 		this.deptName = deptName;
 	}
 	
