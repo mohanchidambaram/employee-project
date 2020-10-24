@@ -46,10 +46,10 @@ public interface EmployeeService {
 	/**
 	 * deleteEmployee is used to remove a employee detail.
 	 * 
-	 * @param viewModel
-	 * 			contains the employee to be removed.
+	 * @param id
+	 * 			contains the employee id to be removed.
 	 */
-	void deleteEmployee(ResponseViewModel viewModel);
+	void deleteEmployee(int id);
 	
 	
 }

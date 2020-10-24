@@ -57,12 +57,8 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
-	public void deleteEmployee(ResponseViewModel viewModel) {
-		EmployeeEntity employeeEntity = formEmployeeEntity(viewModel);
-		if(Objects.nonNull(employeeEntity)) {
-			employeeRepository.delete(employeeEntity);
-		}
-		
+	public void deleteEmployee(int id) {
+		employeeRepository.deleteById(id);
 	}
 	
 	/**
